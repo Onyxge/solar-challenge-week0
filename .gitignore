@@ -14,3 +14,7 @@ venv/
 
 # VS Code settings (optional)
 .vscode/
+
+#DS_Store Stores folder-specific metadata like icon positions, 
+#view settings, and window attributes
+.DS_Store
