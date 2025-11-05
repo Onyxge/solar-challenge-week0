@@ -1,0 +1,1 @@
+# Solar Data Challenge Week 0
