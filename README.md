@@ -4,6 +4,7 @@
 This project is part of the **10 Academy Artificial Intelligence Mastery Program (Week 0 Challenge)**.  
 The goal is to perform a **comprehensive data analysis** of solar farm environmental data from three different countries — **Benin**, **Sierra Leone**, and **Togo** — to identify the highest-potential region for a new solar energy investment.
 
+#### [Read the full report here](./report.md)
 ### 🔍 The analysis involves:
 - **Data Cleaning & Quality Assurance:** Handling missing values, correcting sensor errors (e.g., negative irradiance), and standardizing formats.  
 - **Exploratory Data Analysis (EDA):** Exploring region-specific trends in solar irradiance, wind patterns, temperature, and soiling.  
