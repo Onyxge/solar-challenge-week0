@@ -72,10 +72,15 @@ pip install -r requirements.txt
 ### - togo-dapaong_qc.csv
 
 ### 🚀 Running the Interactive Dashboard
+#### Dashboard Preview
+
+The dashboard provides an interactive way to explore all the key findings from the analysis, including side-by-side comparisons, seasonal trends, and environmental factors.
+
 Ensure Setup is Complete & the cleand data is generated 
 ```
 streamlit run app/main.py
 ```
+![](./images/dashboard-screenshot.png)
 
 ## ⚙️ Usage
 
