@@ -55,7 +55,6 @@ cd solar-challenge-week0
 ### 2️⃣ Create a virtual environment
 ```bash
 python -m venv .venv
-
 ```
 ### 3️⃣ Activate the environment
 ```bash
@@ -64,7 +63,6 @@ source .venv/bin/activate   # On Windows: .venv\bin\activate
 ### 4️⃣ Install dependencies
 ```bash
 pip install -r requirements.txt
-
 ```
 
 ### 5️⃣ Add the raw data files
@@ -73,6 +71,11 @@ pip install -r requirements.txt
 ### - sierraleone-bumbuna.csv
 ### - togo-dapaong_qc.csv
 
+### 🚀 Running the Interactive Dashboard
+Ensure Setup is Complete & the cleand data is generated 
+```
+streamlit run app/main.py
+```
 
 ## ⚙️ Usage
 
