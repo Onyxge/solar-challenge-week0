@@ -60,7 +60,8 @@ st.sidebar.header("Dashboard Controls")
 countries_to_show = st.sidebar.multiselect(
     'Select Countries',
     options=df_all['Country'].unique(),
-    default=df_all['Country'].unique()  # Show all by default
+    # default=df_all['Country'].unique()  # Show all by default
+    default=['Benin']
 )
 
 # Filter the main dataframe based on user selection
@@ -73,15 +74,23 @@ if df_filtered.empty:
 
 # --- Main Page Content ---
 
+
 # 1. Key Metrics & Summary Table
 st.header("Cross-Country Comparison")
 st.markdown(f"Displaying analysis for: **{', '.join(countries_to_show)}**")
 
 # Calculate summary stats from Task 3
 summary_table = df_filtered.groupby('Country')[['GHI', 'DNI', 'DHI']].agg(['mean', 'median', 'std'])
+
+# --- FIX: Flatten MultiIndex columns to remove warnings ---
+# Create new, unique column names like "GHI - mean", "DNI - median"
+summary_table.columns = [f"{col[0]} - {col[1]}" for col in summary_table.columns]
+# --- End of fix ---
+
 st.subheader("Summary Statistics (Mean, Median, Std Dev)")
-# We apply a number format to 2 decimal places to get rid of the emojis
+# We apply a number format to 2 decimal places
 st.dataframe(summary_table.style.format("{:.2f}"))
+
 
 # 2. Boxplots (from Task 3)
 st.subheader("Solar Irradiance Comparison (GHI, DNI, DHI)")
