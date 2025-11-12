@@ -14,15 +14,15 @@ def load_data():
     # Load the three cleaned datasets
     # We add error handling in case a file is missing
     try:
-        df_benin = pd.read_csv('data/benin_clean.csv',
+        df_benin = pd.read_csv('dashboard_data/benin_clean.csv',
                                parse_dates=['Timestamp'],
                                index_col='Timestamp')
 
-        df_sl = pd.read_csv('data/sierraleone_clean.csv',
+        df_sl = pd.read_csv('dashboard_data/sierraleone_clean.csv',
                             parse_dates=['Timestamp'],
                             index_col='Timestamp')
 
-        df_togo = pd.read_csv('data/togo_clean.csv',
+        df_togo = pd.read_csv('dashboard_data/togo_clean.csv',
                               parse_dates=['Timestamp'],
                               index_col='Timestamp')
     except FileNotFoundError as e:
